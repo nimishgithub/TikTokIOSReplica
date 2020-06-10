@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3rM-KZ-KUp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Explore ScreenVC-->
+        <scene sceneID="ilq-MU-k2J">
+            <objects>
+                <viewController id="Wmb-3t-IN3" customClass="ExploreScreenVC" customModule="Rizzle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eLE-SQ-6th">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lG4-68-ugF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="TNk-Zv-U2m">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lG4-68-ugF" firstAttribute="leading" secondItem="ua3-io-lXp" secondAttribute="leading" id="2WM-GT-1mM"/>
+                            <constraint firstItem="ua3-io-lXp" firstAttribute="trailing" secondItem="lG4-68-ugF" secondAttribute="trailing" id="4Vv-U8-DG7"/>
+                            <constraint firstAttribute="bottom" secondItem="lG4-68-ugF" secondAttribute="bottom" id="WKj-gE-Y91"/>
+                            <constraint firstItem="lG4-68-ugF" firstAttribute="top" secondItem="ua3-io-lXp" secondAttribute="top" id="v40-yU-9YI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ua3-io-lXp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Iab-Ov-v4s"/>
+                    <connections>
+                        <outlet property="tableView" destination="lG4-68-ugF" id="JhF-7d-YsU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oJq-I1-MKV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186.9565217391305" y="238.39285714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="F12-UH-a8P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3rM-KZ-KUp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AMG-rq-nJn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Wmb-3t-IN3" kind="relationship" relationship="rootViewController" id="oG8-Ib-ygq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFQ-ZK-Dmm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276.81159420289856" y="238.39285714285714"/>
+        </scene>
+        <!--Zoom-->
+        <scene sceneID="fES-ui-e8q">
+            <objects>
+                <viewController storyboardIdentifier="PlayerScreenContainerVC" automaticallyAdjustsScrollViewInsets="NO" id="iKh-66-ddu" customClass="PlayerScreenContainerVC" customModule="Rizzle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TLI-EU-Rnf"/>
+                        <viewControllerLayoutGuide type="bottom" id="K6B-tH-sOd"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="AJ9-bw-Msg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrY-8U-2dt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="StQ-M3-Mif" kind="embed" id="fZE-mN-SCA"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xrY-8U-2dt" firstAttribute="leading" secondItem="AJ9-bw-Msg" secondAttribute="leading" id="K8g-iW-gH8"/>
+                            <constraint firstAttribute="bottom" secondItem="xrY-8U-2dt" secondAttribute="bottom" id="Ora-qH-m5h"/>
+                            <constraint firstItem="xrY-8U-2dt" firstAttribute="top" secondItem="AJ9-bw-Msg" secondAttribute="top" id="XiT-e2-bkS"/>
+                            <constraint firstAttribute="trailing" secondItem="xrY-8U-2dt" secondAttribute="trailing" id="iUr-df-Agw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ig9-Ux-re9"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Zoom" id="XGb-5f-fkg"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5X0-7Y-l4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2136" y="238"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Rcg-B1-a75">
+            <objects>
+                <pageViewController automaticallyAdjustsScrollViewInsets="NO" transitionStyle="scroll" pageSpacing="10" navigationOrientation="vertical" spineLocation="none" id="StQ-M3-Mif" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nKV-vQ-Vem" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2973" y="238"/>
+        </scene>
+        <!--Player ScreenVC-->
+        <scene sceneID="yYm-Ea-Iev">
+            <objects>
+                <viewController storyboardIdentifier="PlayerScreenVC" automaticallyAdjustsScrollViewInsets="NO" id="H5p-eM-19k" customClass="PlayerScreenVC" customModule="Rizzle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MN2-Ob-2Xf"/>
+                        <viewControllerLayoutGuide type="bottom" id="UMS-Qa-k42"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FpT-0c-TJQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wIx-Zr-9is">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="P5D-f2-qWu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:tfI-fB-UcA:image" translatesAutoresizingMaskIntoConstraints="NO" id="tfI-fB-UcA">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tfI-fB-UcA" secondAttribute="bottom" id="G9z-GQ-hP2"/>
+                                    <constraint firstItem="tfI-fB-UcA" firstAttribute="top" secondItem="P5D-f2-qWu" secondAttribute="top" id="K26-Lc-pGc"/>
+                                    <constraint firstItem="tfI-fB-UcA" firstAttribute="leading" secondItem="P5D-f2-qWu" secondAttribute="leading" id="NJX-o7-ri4"/>
+                                    <constraint firstAttribute="trailing" secondItem="tfI-fB-UcA" secondAttribute="trailing" id="mey-Hs-FEj"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tfI-fB-UcA" firstAttribute="height" secondItem="FpT-0c-TJQ" secondAttribute="height" id="9Ea-iv-2uk"/>
+                            <constraint firstAttribute="bottom" secondItem="P5D-f2-qWu" secondAttribute="bottom" id="9FE-kh-CGd"/>
+                            <constraint firstItem="wIx-Zr-9is" firstAttribute="top" secondItem="FpT-0c-TJQ" secondAttribute="top" id="FKQ-jD-qj8"/>
+                            <constraint firstItem="P5D-f2-qWu" firstAttribute="top" secondItem="FpT-0c-TJQ" secondAttribute="top" id="RxD-95-t08"/>
+                            <constraint firstItem="P5D-f2-qWu" firstAttribute="leading" secondItem="FpT-0c-TJQ" secondAttribute="leading" id="Utw-Ld-A1Q"/>
+                            <constraint firstAttribute="trailing" secondItem="P5D-f2-qWu" secondAttribute="trailing" id="VqR-ID-DJr"/>
+                            <constraint firstAttribute="trailing" secondItem="wIx-Zr-9is" secondAttribute="trailing" id="XxY-8M-UvK"/>
+                            <constraint firstAttribute="bottom" secondItem="wIx-Zr-9is" secondAttribute="bottom" id="dKA-Ei-bbB"/>
+                            <constraint firstItem="tfI-fB-UcA" firstAttribute="width" secondItem="FpT-0c-TJQ" secondAttribute="width" id="eB2-pf-edl"/>
+                            <constraint firstItem="wIx-Zr-9is" firstAttribute="leading" secondItem="FpT-0c-TJQ" secondAttribute="leading" id="jzK-5B-WNi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="57m-0C-ArF"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="tfI-fB-UcA" id="LNo-TA-aoX"/>
+                        <outlet property="imageViewBottomConstraint" destination="G9z-GQ-hP2" id="hUB-mY-NIS"/>
+                        <outlet property="imageViewLeadingConstraint" destination="NJX-o7-ri4" id="9Di-Jp-jLP"/>
+                        <outlet property="imageViewTopConstraint" destination="K26-Lc-pGc" id="BgD-5A-Z8g"/>
+                        <outlet property="imageViewTrailingConstraint" destination="mey-Hs-FEj" id="aGS-JW-BUM"/>
+                        <outlet property="playerView" destination="wIx-Zr-9is" id="etg-JU-nHV"/>
+                        <outlet property="scrollView" destination="P5D-f2-qWu" id="trG-YU-hHL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p0X-sI-1nC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3791" y="238"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="imageView:tfI-fB-UcA:image" width="16" height="16">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
+S2V5ZWRBcmNoaXZlctEICVRyb290gAGvEA8LDBccISIoKS8yPERFSUxVJG51bGzVDQ4PEBESExQVFlYk
+Y2xhc3NeTlNSZXNpemluZ01vZGVcTlNJbWFnZUZsYWdzVk5TUmVwc1dOU0NvbG9ygA4QABIEwAAAgAKA
+CdIYDRkbWk5TLm9iamVjdHOhGoADgAjSGA0dG6IeH4AEgAWACBAF0yMNJCUmJ1dOUy5iYXNlW05TLnJl
+bGF0aXZlgACAB4AGXxBzZmlsZTovLy9BcHBsaWNhdGlvbnMvWGNvZGUuYXBwL0NvbnRlbnRzL1BsdWdJ
+bnMvSURFSW50ZXJmYWNlQnVpbGRlcktpdC5mcmFtZXdvcmsvUmVzb3VyY2VzL0lCTWlzc2luZ0ltYWdl
+R2x5cGgudGlmZtIqKywtWiRjbGFzc25hbWVYJGNsYXNzZXNVTlNVUkyiLC5YTlNPYmplY3TSKiswMVdO
+U0FycmF5ojAu1TM0NTYNNzg5OjtXTlNXaGl0ZVxOU0NvbXBvbmVudHNcTlNDb2xvclNwYWNlXxASTlND
+dXN0b21Db2xvclNwYWNlRDAgMABDMCAwEAOACoAN1D0+Pw1AQUJDVE5TSURVTlNJQ0NXTlNNb2RlbBAJ
+gAsQAIAMTxERaAAAEWhhcHBsAgAAAG1udHJHUkFZWFlaIAfcAAgAFwAPAC4AD2Fjc3BBUFBMAAAAAG5v
+bmUAAAAAAAAAAAAAAAAAAAAAAAD21gABAAAAANMtYXBwbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAABWRlc2MAAADAAAAAeWRzY20AAAE8AAAH6GNwcnQAAAkkAAAAI3d0
+cHQAAAlIAAAAFGtUUkMAAAlcAAAIDGRlc2MAAAAAAAAAH0dlbmVyaWMgR3JheSBHYW1tYSAyLjIgUHJv
+ZmlsZQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtbHVjAAAAAAAAAB8AAAAMc2tTSwAAAC4AAAGEZGFESwAA
+ADgAAAGyY2FFUwAAADgAAAHqdmlWTgAAAEAAAAIicHRCUgAAAEoAAAJidWtVQQAAACwAAAKsZnJGVQAA
+AD4AAALYaHVIVQAAADQAAAMWemhUVwAAAB4AAANKbmJOTwAAADoAAANoY3NDWgAAACgAAAOiaGVJTAAA
+ACQAAAPKaXRJVAAAAE4AAAPucm9STwAAACoAAAQ8ZGVERQAAAE4AAARma29LUgAAACIAAAS0c3ZTRQAA
+ADgAAAGyemhDTgAAAB4AAATWamFKUAAAACYAAAT0ZWxHUgAAACoAAAUacHRQTwAAAFIAAAVEbmxOTAAA
+AEAAAAWWZXNFUwAAAEwAAAXWdGhUSAAAADIAAAYidHJUUgAAACQAAAZUZmlGSQAAAEYAAAZ4aHJIUgAA
+AD4AAAa+cGxQTAAAAEoAAAb8cnVSVQAAADoAAAdGZW5VUwAAADwAAAeAYXJFRwAAACwAAAe8AFYBYQBl
+AG8AYgBlAGMAbgDhACAAcwBpAHYA4QAgAGcAYQBtAGEAIAAyACwAMgBHAGUAbgBlAHIAaQBzAGsAIABn
+AHIA5QAgADIALAAyACAAZwBhAG0AbQBhAHAAcgBvAGYAaQBsAEcAYQBtAG0AYQAgAGQAZQAgAGcAcgBp
+AHMAbwBzACAAZwBlAG4A6AByAGkAYwBhACAAMgAuADIAQx6lAHUAIABoAOwAbgBoACAATQDgAHUAIAB4
+AOEAbQAgAEMAaAB1AG4AZwAgAEcAYQBtAG0AYQAgADIALgAyAFAAZQByAGYAaQBsACAARwBlAG4A6QBy
+AGkAYwBvACAAZABhACAARwBhAG0AYQAgAGQAZQAgAEMAaQBuAHoAYQBzACAAMgAsADIEFwQwBDMEMAQ7
+BEwEPQQwACAARwByAGEAeQAtBDMEMAQ8BDAAIAAyAC4AMgBQAHIAbwBmAGkAbAAgAGcA6QBuAOkAcgBp
+AHEAdQBlACAAZwByAGkAcwAgAGcAYQBtAG0AYQAgADIALAAyAMEAbAB0AGEAbADhAG4AbwBzACAAcwB6
+APwAcgBrAGUAIABnAGEAbQBtAGEAIAAyAC4AMpAadShwcJaOUUlepgAgADIALgAyACCCcl9pY8+P8ABH
+AGUAbgBlAHIAaQBzAGsAIABnAHIA5QAgAGcAYQBtAG0AYQAgADIALAAyAC0AcAByAG8AZgBpAGwATwBi
+AGUAYwBuAOEAIAFhAGUAZADhACAAZwBhAG0AYQAgADIALgAyBdIF0AXeBdQAIAXQBeQF1QXoACAF2wXc
+BdwF2QAgADIALgAyAFAAcgBvAGYAaQBsAG8AIABnAHIAaQBnAGkAbwAgAGcAZQBuAGUAcgBpAGMAbwAg
+AGQAZQBsAGwAYQAgAGcAYQBtAG0AYQAgADIALAAyAEcAYQBtAGEAIABnAHIAaQAgAGcAZQBuAGUAcgBp
+AGMBAwAgADIALAAyAEEAbABsAGcAZQBtAGUAaQBuAGUAcwAgAEcAcgBhAHUAcwB0AHUAZgBlAG4ALQBQ
+AHIAbwBmAGkAbAAgAEcAYQBtAG0AYQAgADIALAAyx3y8GAAg1ozAyQAgrBC5yAAgADIALgAyACDVBLhc
+0wzHfGZukBpwcF6mfPtlcAAgADIALgAyACBjz4/wZYdO9k4AgiwwsDDsMKQwrDDzMN4AIAAyAC4AMgAg
+MNcw7TDVMKEwpDDrA5MDtQO9A7kDugPMACADkwO6A8EDuQAgA5MDrAO8A7wDsQAgADIALgAyAFAAZQBy
+AGYAaQBsACAAZwBlAG4A6QByAGkAYwBvACAAZABlACAAYwBpAG4AegBlAG4AdABvAHMAIABkAGEAIABH
+AGEAbQBtAGEAIAAyACwAMgBBAGwAZwBlAG0AZQBlAG4AIABnAHIAaQBqAHMAIABnAGEAbQBtAGEAIAAy
+ACwAMgAtAHAAcgBvAGYAaQBlAGwAUABlAHIAZgBpAGwAIABnAGUAbgDpAHIAaQBjAG8AIABkAGUAIABn
+AGEAbQBtAGEAIABkAGUAIABnAHIAaQBzAGUAcwAgADIALAAyDiMOMQ4HDioONQ5BDgEOIQ4hDjIOQA4B
+DiMOIg5MDhcOMQ5IDicORA4bACAAMgAuADIARwBlAG4AZQBsACAARwByAGkAIABHAGEAbQBhACAAMgAs
+ADIAWQBsAGUAaQBuAGUAbgAgAGgAYQByAG0AYQBhAG4AIABnAGEAbQBtAGEAIAAyACwAMgAgAC0AcABy
+AG8AZgBpAGkAbABpAEcAZQBuAGUAcgBpAQ0AawBpACAARwByAGEAeQAgAEcAYQBtAG0AYQAgADIALgAy
+ACAAcAByAG8AZgBpAGwAVQBuAGkAdwBlAHIAcwBhAGwAbgB5ACAAcAByAG8AZgBpAGwAIABzAHoAYQBy
+AG8BWwBjAGkAIABnAGEAbQBtAGEAIAAyACwAMgQeBDEESQQwBE8AIARBBDUEQAQwBE8AIAQzBDAEPAQ8
+BDAAIAAyACwAMgAtBD8EQAQ+BEQEOAQ7BEwARwBlAG4AZQByAGkAYwAgAEcAcgBhAHkAIABHAGEAbQBt
+AGEAIAAyAC4AMgAgAFAAcgBvAGYAaQBsAGUGOgYnBkUGJwAgADIALgAyACAGRAZIBkYAIAYxBkUGJwYv
+BkoAIAY5BicGRXRleHQAAAAAQ29weXJpZ2h0IEFwcGxlIEluYy4sIDIwMTIAAFhZWiAAAAAAAADzUQAB
+AAAAARbMY3VydgAAAAAAAAQAAAAABQAKAA8AFAAZAB4AIwAoAC0AMgA3ADsAQABFAEoATwBUAFkAXgBj
+AGgAbQByAHcAfACBAIYAiwCQAJUAmgCfAKQAqQCuALIAtwC8AMEAxgDLANAA1QDbAOAA5QDrAPAA9gD7
+AQEBBwENARMBGQEfASUBKwEyATgBPgFFAUwBUgFZAWABZwFuAXUBfAGDAYsBkgGaAaEBqQGxAbkBwQHJ
+AdEB2QHhAekB8gH6AgMCDAIUAh0CJgIvAjgCQQJLAlQCXQJnAnECegKEAo4CmAKiAqwCtgLBAssC1QLg
+AusC9QMAAwsDFgMhAy0DOANDA08DWgNmA3IDfgOKA5YDogOuA7oDxwPTA+AD7AP5BAYEEwQgBC0EOwRI
+BFUEYwRxBH4EjASaBKgEtgTEBNME4QTwBP4FDQUcBSsFOgVJBVgFZwV3BYYFlgWmBbUFxQXVBeUF9gYG
+BhYGJwY3BkgGWQZqBnsGjAadBq8GwAbRBuMG9QcHBxkHKwc9B08HYQd0B4YHmQesB78H0gflB/gICwgf
+CDIIRghaCG4IggiWCKoIvgjSCOcI+wkQCSUJOglPCWQJeQmPCaQJugnPCeUJ+woRCicKPQpUCmoKgQqY
+Cq4KxQrcCvMLCwsiCzkLUQtpC4ALmAuwC8gL4Qv5DBIMKgxDDFwMdQyODKcMwAzZDPMNDQ0mDUANWg10
+DY4NqQ3DDd4N+A4TDi4OSQ5kDn8Omw62DtIO7g8JDyUPQQ9eD3oPlg+zD88P7BAJECYQQxBhEH4QmxC5
+ENcQ9RETETERTxFtEYwRqhHJEegSBxImEkUSZBKEEqMSwxLjEwMTIxNDE2MTgxOkE8UT5RQGFCcUSRRq
+FIsUrRTOFPAVEhU0FVYVeBWbFb0V4BYDFiYWSRZsFo8WshbWFvoXHRdBF2UXiReuF9IX9xgbGEAYZRiK
+GK8Y1Rj6GSAZRRlrGZEZtxndGgQaKhpRGncanhrFGuwbFBs7G2MbihuyG9ocAhwqHFIcexyjHMwc9R0e
+HUcdcB2ZHcMd7B4WHkAeah6UHr4e6R8THz4faR+UH78f6iAVIEEgbCCYIMQg8CEcIUghdSGhIc4h+yIn
+IlUigiKvIt0jCiM4I2YjlCPCI/AkHyRNJHwkqyTaJQklOCVoJZclxyX3JicmVyaHJrcm6CcYJ0kneier
+J9woDSg/KHEooijUKQYpOClrKZ0p0CoCKjUqaCqbKs8rAis2K2krnSvRLAUsOSxuLKIs1y0MLUEtdi2r
+LeEuFi5MLoIuty7uLyQvWi+RL8cv/jA1MGwwpDDbMRIxSjGCMbox8jIqMmMymzLUMw0zRjN/M7gz8TQr
+NGU0njTYNRM1TTWHNcI1/TY3NnI2rjbpNyQ3YDecN9c4FDhQOIw4yDkFOUI5fzm8Ofk6Njp0OrI67zst
+O2s7qjvoPCc8ZTykPOM9Ij1hPaE94D4gPmA+oD7gPyE/YT+iP+JAI0BkQKZA50EpQWpBrEHuQjBCckK1
+QvdDOkN9Q8BEA0RHRIpEzkUSRVVFmkXeRiJGZ0arRvBHNUd7R8BIBUhLSJFI10kdSWNJqUnwSjdKfUrE
+SwxLU0uaS+JMKkxyTLpNAk1KTZNN3E4lTm5Ot08AT0lPk0/dUCdQcVC7UQZRUFGbUeZSMVJ8UsdTE1Nf
+U6pT9lRCVI9U21UoVXVVwlYPVlxWqVb3V0RXklfgWC9YfVjLWRpZaVm4WgdaVlqmWvVbRVuVW+VcNVyG
+XNZdJ114XcleGl5sXr1fD19hX7NgBWBXYKpg/GFPYaJh9WJJYpxi8GNDY5dj62RAZJRk6WU9ZZJl52Y9
+ZpJm6Gc9Z5Nn6Wg/aJZo7GlDaZpp8WpIap9q92tPa6dr/2xXbK9tCG1gbbluEm5rbsRvHm94b9FwK3CG
+cOBxOnGVcfByS3KmcwFzXXO4dBR0cHTMdSh1hXXhdj52m3b4d1Z3s3gReG54zHkqeYl553pGeqV7BHtj
+e8J8IXyBfOF9QX2hfgF+Yn7CfyN/hH/lgEeAqIEKgWuBzYIwgpKC9INXg7qEHYSAhOOFR4Wrhg6GcobX
+hzuHn4gEiGmIzokziZmJ/opkisqLMIuWi/yMY4zKjTGNmI3/jmaOzo82j56QBpBukNaRP5GokhGSepLj
+k02TtpQglIqU9JVflcmWNJaflwqXdZfgmEyYuJkkmZCZ/JpomtWbQpuvnByciZz3nWSd0p5Anq6fHZ+L
+n/qgaaDYoUehtqImopajBqN2o+akVqTHpTilqaYapoum/adup+CoUqjEqTepqaocqo+rAqt1q+msXKzQ
+rUStuK4trqGvFq+LsACwdbDqsWCx1rJLssKzOLOutCW0nLUTtYq2AbZ5tvC3aLfguFm40blKucK6O7q1
+uy67p7whvJu9Fb2Pvgq+hL7/v3q/9cBwwOzBZ8Hjwl/C28NYw9TEUcTOxUvFyMZGxsPHQce/yD3IvMk6
+ybnKOMq3yzbLtsw1zLXNNc21zjbOts83z7jQOdC60TzRvtI/0sHTRNPG1EnUy9VO1dHWVdbY11zX4Nhk
+2OjZbNnx2nba+9uA3AXcit0Q3ZbeHN6i3ynfr+A24L3hROHM4lPi2+Nj4+vkc+T85YTmDeaW5x/nqegy
+6LzpRunQ6lvq5etw6/vshu0R7ZzuKO6070DvzPBY8OXxcvH/8ozzGfOn9DT0wvVQ9d72bfb794r4Gfio
++Tj5x/pX+uf7d/wH/Jj9Kf26/kv+3P9t///SKitGR1xOU0NvbG9yU3BhY2WiSC5cTlNDb2xvclNwYWNl
+0iorSktXTlNDb2xvcqJKLtIqK01OV05TSW1hZ2WiTS4ACAARABoAJAApADIANwBJAEwAUQBTAGUAawB2
+AH0AjACZAKAAqACqAKwAsQCzALUAugDFAMcAyQDLANAA0wDVANcA2QDbAOIA6gD2APgA+gD8AXIBdwGC
+AYsBkQGUAZ0BogGqAa0BuAHAAc0B2gHvAfQB+AH6AfwB/gIHAgwCEgIaAhwCHgIgAiITjhOTE6AToxOw
+E7UTvRPAE8UTzQAAAAAAAAIBAAAAAAAAAE8AAAAAAAAAAAAAAAAAABPQA
+</mutableData>
+        </image>
+    </resources>
+</document>
